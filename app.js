@@ -20,7 +20,7 @@ const swaggerOptions = {
                     description: 'Local server'
                 },
                 {
-                    url: 'https://api_url_testing',
+                    url: 'https://blueskyan.herokuapp.com/',
                     description: 'Testing server'
                 }
             ],
