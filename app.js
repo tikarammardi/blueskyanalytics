@@ -1,0 +1,51 @@
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const countryRouter = require('./routes/country');
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
+const app = express();
+const swaggerOptions = {
+    swaggerDefinition: {
+        info: {
+            version: "1.0.0",
+            title: "Green House Gases Emmission API",
+            description: "Green House Gases Emmission Information",
+            contact: {
+                name: "Tikaram Mardi"
+            },
+            servers: [
+                {
+                    url: 'http://localhost:5000/',
+                    description: 'Local server'
+                },
+                {
+                    url: 'https://api_url_testing',
+                    description: 'Testing server'
+                }
+            ],
+        }
+    },
+    apis: ['./routes/*.js']
+    // apis: ["app.js"]
+};
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+
+
+app.use('/', countryRouter);
+app.use('/country/', countryRouter);
+
+
+const PORT = 5000;
+
+app.listen(PORT, () => {
+    console.info(`Server running at port:${PORT}`);
+});
+module.exports = app;
