@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const countryRouter = require('./routes/country');
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const { cacheMiddleware } = require('./middleware/cache-middleware');
 
 const app = express();
 const swaggerOptions = {
@@ -37,8 +38,8 @@ app.use(cookieParser());
 
 
 
-app.use('/', countryRouter);
-app.use('/country/', countryRouter);
+app.use('/', countryRouter, cacheMiddleware(60));
+app.use('/country/', countryRouter, cacheMiddleware(60));
 
 
 const PORT = process.env.PORT || 5000;
