@@ -43,9 +43,9 @@ app.use('/', countryRouter);
 app.use('/country/', countryRouter);
 
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.info(`Server running at port:${PORT}`);
 });
-module.exports = app;
+
