@@ -15,9 +15,9 @@ Add appropriate checks for queries and erroneous values
 Bonus Features:
 Add caching
 
-##Live Link
-https://blueskyan.herokuapp.com/countries
-https://blueskyan.herokuapp.com/country/id?startYear=2012&endYear=2014&parameters=Co2,sf6
+## Live Link ##
+[get countries data](https://blueskyan.herokuapp.com/countries)
+[get data by query string](https://blueskyan.herokuapp.com/country/id?startYear=2012&endYear=2014&parameters=Co2,sf6)
 
 <img width="1431" alt="image1" src="https://user-images.githubusercontent.com/19359591/142768415-ef8fab5b-7b5f-487e-a863-773364cd8603.png">
 <img width="1433" alt="image2" src="https://user-images.githubusercontent.com/19359591/142768424-8ef6b8c0-8bb9-4e09-aad3-91708ae28605.png">
