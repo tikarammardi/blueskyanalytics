@@ -14,3 +14,6 @@ should return all values for the selected parameters between startYear and endYe
 Add appropriate checks for queries and erroneous values
 Bonus Features:
 Add caching
+<img width="1431" alt="image1" src="https://user-images.githubusercontent.com/19359591/142768415-ef8fab5b-7b5f-487e-a863-773364cd8603.png">
+<img width="1433" alt="image2" src="https://user-images.githubusercontent.com/19359591/142768424-8ef6b8c0-8bb9-4e09-aad3-91708ae28605.png">
+<img width="1433" alt="image3" src="https://user-images.githubusercontent.com/19359591/142768430-42ee255f-6c54-43b2-a0c4-55bfa1dd46c7.png">
